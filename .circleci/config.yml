@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: python --version
-      - run: pyhton main.py
+      - run: python main.py
 
 workflows:
   build_now:
