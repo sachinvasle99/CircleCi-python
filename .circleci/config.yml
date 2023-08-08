@@ -6,11 +6,19 @@ jobs:
       - image: cimg/python:3.11.4
     steps:
       - checkout
-      - run: python --version
       - run: python main.py
-
+  
+  tests: 
+    docker:
+      - image: cimg/python:3.11.4
+    steps:
+      - checkout
+      - run: python tests.py
 workflows:
   build_now:
     jobs:
       - build
+      - tests:
+          requires:
+            - build
           
