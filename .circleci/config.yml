@@ -21,7 +21,7 @@ jobs:
       - run: echo "deploying to production server"
 
 workflows:
-  build_now:
+  build_test_and_deploy:
     jobs:
       - build
       - tests:
